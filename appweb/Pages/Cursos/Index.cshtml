@@ -1,0 +1,26 @@
+﻿@page
+@model appweb.Pages.Cursos.IndexModel
+@{
+    ViewData["Title"] = "Cursos";
+}
+
+<h2>Cursos</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Profesor</th>
+            <th>Ciclo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var curso in Model.Cursos)
+        {
+            <tr>
+                <td>@curso.Nombre</td>
+                <td>@curso.Profesor</td>
+                <td>@curso.Ciclo</td>
+            </tr>
+        }
+    </tbody>
+</table>
